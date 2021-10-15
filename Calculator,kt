@@ -1,0 +1,39 @@
+// Write your code here 
+class Calculator( val name: String){
+
+init{
+  println("$name's Calculator 🧮")
+} 
+
+fun add(param1: Int, param2: Int): Int {
+return param1 + param2
+}
+fun subtract(param1: Int, param2: Int): Int {
+return param1 - param2
+}
+fun multiply(param1: Int, param2: Int): Int {
+return param1 * param2
+}
+fun divide(param1: Int, param2: Int): Int {
+  if(param2 == 0){
+    println("Second number must not be less than 1")
+  }
+return param1 / param2
+}
+
+fun power(param1: Int, param2: Int): Int {
+var result: Int = 1
+for(i in 1..param2){
+  result *= param1
+}
+return result
+}
+}
+fun main(){
+var cal = Calculator("Codey")
+println(cal.add(2,2))
+println(cal.subtract(2,2))
+println(cal.multiply(2,2))
+println(cal.divide(2,2))
+println(cal.power(2,2))
+}
